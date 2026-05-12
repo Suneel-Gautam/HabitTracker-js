@@ -5,19 +5,25 @@
 }
 
 :root {
-  --primary-colors: black;
+  --primary-colors: rgb(70, 63, 63);
   --third-colors: gray;
-  --secondary-colors: white;
-  --background-color: black;
+  --secondary-colors: rgb(33, 30, 30);
+  --background-color: #3e3d3d;
+  --border-color: red;
+  --button-colors: rgb(104, 2, 6);
+
+  --text-primaryColor: white;
+  --text-secondaryColor: black;
+  --text-ThirdColor: gray;
 
   --text-xs: 8px;
-  --text-sm: 18px;
+  --text-sm: 16px;
   --text-md: 24px;
   --text-lg: 34px;
 
   --p-xs: 6px;
-  --p-sm: 8px;
-  --p-md: 16px;
+  --p-sm: 12px;
+  --p-md: 28px;
   --p-lg: 32px;
 }
 html,
@@ -58,29 +64,131 @@ body {
 .modal {
   background-color: var(--secondary-colors);
   max-width: 100%;
-  width: 350px;
-  height: 350px;
-  padding: var(--p-md) var(--p-lg);
+  width: 500px;
   border-radius: var(--p-sm);
 }
 
-.modal span {
+.modal-Heading {
+  border-bottom: 2px solid rgb(151, 145, 145);
+}
+.heading-content {
+  margin: var(--p-sm) var(--p-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-primaryColor);
+}
+.heading-content span {
   font-size: var(--text-md);
   font-weight: 500;
 }
-.modal .input-box {
-  margin-top: var(--p-md);
+.heading-content div {
+  font-size: var(--text-md);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.heading-content div:hover {
+  font-size: var(--text-md);
+  cursor: pointer;
+  scale: 1.6;
 }
 
-.modal input {
-  margin-top: var(--p-xs);
-  width: 90%;
-  padding: var(--p-sm) var(--p-xs);
-  border: 2px solid hsl(0, 46%, 74%);
-  border-radius: var(--p-xs);
+.modal-Container {
+  margin: var(--p-lg) var(--p-md);
+  background-color: var(--background-color);
+  border-radius: var(--p-sm);
+  padding: var(--p-sm) var(--p-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: var(--p-md);
+}
+
+.modal-Container input {
   outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: var(--background-color);
+  color: var(--secondary-colors);
+  width: 100%;
+  padding: var(--p-sm) 0;
+  font-size: var(--text-sm);
+  transition: all 200ms ease-in-out;
+  color: var(--text-primaryColor);
 }
-.modal input:focus {
-  border: 2px solid rgb(235, 10, 10);
+.modal-Container input::placeholder {
+  color: rgb(177, 172, 172);
+}
+.modal-Container input:focus {
+  border-bottom: 1px solid var(--border-color);
+}
+.modal-Container span {
+  color: var(--text-primaryColor);
+  font-size: var(--text-md);
+}
+.modal-Container .Schedule-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--p-xs);
+  flex-wrap: wrap;
+}
+.modal-Container .btns {
+  outline: none;
+  border: none;
+  padding: var(--p-sm) var(--p-md);
+  border-radius: var(--p-lg);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-size: var(--text-sm);
+}
+.modal-Container .btns:hover {
+  scale: 1.1;
+  font-weight: 500;
+}
+.button {
+  padding: 0 var(--p-md);
+  margin-bottom: var(--p-lg);
 }
 
+.days-buttons {
+  margin-top: var(--p-sm);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.days-buttons .days-btn {
+  padding: var(--p-sm);
+  outline: none;
+  border: none;
+  border-radius: var(--p-xs);
+  transition: all 100ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.days-buttons .days-clicked-btn {
+  padding: var(--p-sm);
+  outline: none;
+  border: none;
+  border-radius: var(--p-xs);
+  transition: all 100ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: var(--border-color);
+  color: var(--text-primaryColor);
+}
+.days-buttons .days-btn:hover {
+  scale: 1.09;
+}
+
+.AddTask {
+  width: 100%;
+  padding: var(--p-sm);
+  outline: none;
+  border: none;
+  background-color: var(--button-colors);
+  color: var(--text-primaryColor);
+  font-size: var(--text-sm);
+  border-radius: var(--p-xs);
+  transition: all 200ms ease-in-out;
+}
+.AddTask:hover {
+  scale: 1.01;
+  background-color: var(--background-color);
+}

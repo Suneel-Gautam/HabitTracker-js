@@ -15,17 +15,45 @@
     <div class="modal-overlay">
       <!-- content / box of the modal  -->
       <div class="modal">
-        <span>Add Habit</span>
+        <!-- modal heading -->
+        <div class="modal-Heading">
+          <div class="heading-content">
+            <span> Set Your Goal </span>
+            <div id="close-btn">&times;</div>
+          </div>
+        </div>
 
-      <div></div>
-        <div class="input-box">
-          <Label>Habit Name</Label>
-          <input
-            type="text"
-            id="habit"
-            placeholder="Enter The Task"
-            autofocus
-          />
+        <!-- main  section of modal  -->
+        <div class="modal-Container">
+          <input type="text" placeholder="Enter your task" autofocus />
+          <input type="text" placeholder="Description" />
+        </div>
+
+        <div class="modal-Container">
+          <span> Schedule </span>
+
+          <!-- schedules-buttons -->
+          <div class="Schedule-buttons">
+            <button class="btns">Daily</button>
+            <button class="btns">Weekly</button>
+            <button class="btns">Custom</button>
+          </div>
+
+          <!-- days -->
+
+          <div class="days-buttons">
+            <button class="days-clicked-btn">SUN</button>
+            <button class="days-btn">MON</button>
+            <button class="days-btn">TUE</button>
+            <button class="days-btn">SUN</button>
+            <button class="days-btn">SUN</button>
+            <button class="days-btn">SUN</button>
+          </div>
+        </div>
+
+        <!-- Add Button  -->
+        <div class="button">
+          <button class="AddTask">Add task</button>
         </div>
       </div>
     </div>
